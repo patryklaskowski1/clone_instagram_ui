@@ -18,6 +18,22 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
+          actions: const [
+            Icon(
+              Icons.heart_broken,
+              color: Colors.white,
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: Icon(
+                Icons.arrow_upward,
+                color: Colors.white,
+              ),
+            ),
+          ],
           title: const Text(
             'Instagram',
             style: TextStyle(
@@ -26,7 +42,7 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: const Color.fromARGB(255, 56, 55, 55),
         ),
-        body: Center(
+        body: const Center(
           child: Text('tu'),
         ),
       ),
