@@ -16,7 +16,20 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromARGB(255, 73, 72, 72)),
         useMaterial3: true,
       ),
-      home: const Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'Instagram',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          backgroundColor: const Color.fromARGB(255, 56, 55, 55),
+        ),
+        body: Center(
+          child: Text('tu'),
+        ),
+      ),
     );
   }
 }
