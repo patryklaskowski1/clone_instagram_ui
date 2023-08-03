@@ -14,6 +14,7 @@ class UserStoryAvatar extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.all(10),
               child: CircleAvatar(
+                backgroundImage: AssetImage('images/manchester.jpg'),
                 radius: 35,
               ),
             ),

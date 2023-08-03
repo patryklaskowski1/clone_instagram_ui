@@ -3,10 +3,17 @@ import 'package:clone_instagram_ui/home/widgets/post_model.dart';
 import 'package:clone_instagram_ui/home/widgets/user_story_avatar.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({
     super.key,
   });
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +70,20 @@ class HomePage extends StatelessWidget {
             height: 10,
           ),
           PostModel(),
+          PostModel(),
         ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home), label: '', backgroundColor: Colors.black),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.add_to_photos), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.ondemand_video), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: ''),
+        ],
+        currentIndex: _selectedIndex,
+        backgroundColor: Colors.black,
       ),
     );
   }

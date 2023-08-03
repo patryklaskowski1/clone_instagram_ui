@@ -13,6 +13,7 @@ class FollowersStory extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: CircleAvatar(
             radius: 35,
+            backgroundImage: AssetImage('images/avatar1.jpg'),
           ),
         ),
         Text(

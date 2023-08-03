@@ -14,7 +14,10 @@ class PostModel extends StatelessWidget {
           padding: EdgeInsets.only(left: 20),
           child: Row(
             children: [
-              CircleAvatar(),
+              CircleAvatar(
+                backgroundImage: AssetImage('images/avatar.jpg'),
+                radius: 18,
+              ),
               SizedBox(width: 8),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,13 +27,14 @@ class PostModel extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
+                      fontSize: 14,
                     ),
                   ),
                   Text(
                     'Location',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 15,
+                      fontSize: 12,
                     ),
                   ),
                 ],
