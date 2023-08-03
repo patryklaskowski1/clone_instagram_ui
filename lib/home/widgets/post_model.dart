@@ -11,6 +11,7 @@ class PostModel extends StatefulWidget {
 
 class _PostModelState extends State<PostModel> {
   final int counterLike = 0;
+  final String user = 'Followers name';
 
   @override
   Widget build(BuildContext context) {
@@ -93,18 +94,44 @@ class _PostModelState extends State<PostModel> {
                 Icons.send,
                 color: Colors.white,
               ),
+              SizedBox(width: 220),
+              Icon(
+                Icons.bookmark_border,
+                color: Colors.white,
+              ),
             ],
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 25),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                '$counterLike Like',
+                '$counterLike likes',
                 style: const TextStyle(
                   color: Colors.white,
+                  fontWeight: FontWeight.bold,
                 ),
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    user,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(width: 5),
+                  const Text(
+                    'description user :)',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
