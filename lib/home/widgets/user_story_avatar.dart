@@ -11,11 +11,30 @@ class UserStoryAvatar extends StatelessWidget {
       children: [
         Stack(
           children: [
-            const Padding(
-              padding: EdgeInsets.all(10),
-              child: CircleAvatar(
-                backgroundImage: AssetImage('images/manchester.jpg'),
-                radius: 35,
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                height: 75,
+                width: 75,
+                decoration: const BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Colors.green,
+                      Colors.yellow,
+                      Colors.red,
+                      Colors.purple
+                    ]),
+                    shape: BoxShape.circle),
+                child: Padding(
+                  padding: const EdgeInsets.all(3.0),
+                  child: Container(
+                    decoration: const BoxDecoration(
+                        color: Colors.white, shape: BoxShape.circle),
+                    child: const CircleAvatar(
+                      backgroundColor: Colors.white,
+                      foregroundImage: AssetImage('images/manchester.jpg'),
+                    ),
+                  ),
+                ),
               ),
             ),
             Positioned(
