@@ -14,8 +14,8 @@ class UserStoryAvatar extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10),
               child: Container(
-                height: 75,
-                width: 75,
+                height: 70,
+                width: 70,
                 decoration: const BoxDecoration(
                     gradient: LinearGradient(colors: [
                       Colors.green,

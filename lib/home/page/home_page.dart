@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: EdgeInsets.only(
               top: 10,
-              left: 20,
+              left: 10,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
