@@ -1,3 +1,5 @@
+import 'package:clone_instagram_ui/home/page/followers_story.dart';
+import 'package:clone_instagram_ui/home/page/user_story_avatar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -45,24 +47,9 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 UserStoryAvatar(),
-                Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: CircleAvatar(
-                    radius: 35,
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: CircleAvatar(
-                    radius: 35,
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: CircleAvatar(
-                    radius: 35,
-                  ),
-                ),
+                FollowersStory(),
+                FollowersStory(),
+                FollowersStory(),
               ],
             ),
           ),
@@ -73,49 +60,6 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class UserStoryAvatar extends StatelessWidget {
-  const UserStoryAvatar({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Stack(
-          children: [
-            const Padding(
-              padding: EdgeInsets.all(10),
-              child: CircleAvatar(
-                radius: 35,
-              ),
-            ),
-            Positioned(
-              bottom: 10,
-              left: 55,
-              child: InkWell(
-                borderRadius: BorderRadius.circular(100.0),
-                onTap: () {},
-                child: const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Icon(
-                    Icons.add_circle,
-                    color: Colors.blue,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-        const Text(
-          'Your story',
-          style: TextStyle(color: Colors.white),
-        ),
-      ],
     );
   }
 }
