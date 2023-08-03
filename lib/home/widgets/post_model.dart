@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 
-class PostModel extends StatelessWidget {
+class PostModel extends StatefulWidget {
   const PostModel({
     super.key,
   });
+
+  @override
+  State<PostModel> createState() => _PostModelState();
+}
+
+class _PostModelState extends State<PostModel> {
+  final int counterLike = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +73,45 @@ class PostModel extends StatelessWidget {
             image: AssetImage('images/dalmacja.jpg'),
           ),
         ),
+        const Padding(
+          padding: EdgeInsets.only(
+            left: 25,
+          ),
+          child: Row(
+            children: [
+              Icon(
+                Icons.favorite_border,
+                color: Colors.white,
+              ),
+              SizedBox(width: 20),
+              Icon(
+                Icons.comment,
+                color: Colors.white,
+              ),
+              SizedBox(width: 20),
+              Icon(
+                Icons.send,
+                color: Colors.white,
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 25),
+          child: Column(
+            children: [
+              Text(
+                '$counterLike Like',
+                style: const TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        )
       ],
     );
   }

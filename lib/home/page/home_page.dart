@@ -21,17 +21,14 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         actions: const [
-          Icon(
-            Icons.heart_broken,
-            color: Color.fromARGB(255, 59, 32, 32),
-          ),
+          Icon(Icons.favorite_border, color: Colors.white),
           SizedBox(
             width: 20,
           ),
           Padding(
             padding: EdgeInsets.only(right: 20.0),
             child: Icon(
-              Icons.message,
+              Icons.send,
               color: Colors.white,
             ),
           ),
