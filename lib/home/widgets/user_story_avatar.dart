@@ -18,10 +18,9 @@ class UserStoryAvatar extends StatelessWidget {
                 width: 70,
                 decoration: const BoxDecoration(
                     gradient: LinearGradient(colors: [
-                      Colors.green,
-                      Colors.yellow,
-                      Colors.red,
-                      Colors.purple
+               Colors.orange,
+                  Colors.red,
+                  Colors.purple,
                     ]),
                     shape: BoxShape.circle),
                 child: Padding(

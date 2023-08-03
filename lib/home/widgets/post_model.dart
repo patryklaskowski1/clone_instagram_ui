@@ -19,10 +19,9 @@ class PostModel extends StatelessWidget {
                 width: 40,
                 decoration: const BoxDecoration(
                     gradient: LinearGradient(colors: [
-                      Colors.green,
-                      Colors.yellow,
+                      Colors.orange,
                       Colors.red,
-                      Colors.purple
+                      Colors.purple,
                     ]),
                     shape: BoxShape.circle),
                 child: Padding(
