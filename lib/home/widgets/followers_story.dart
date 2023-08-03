@@ -16,10 +16,11 @@ class FollowersStory extends StatelessWidget {
           ),
         ),
         Text(
-          'Followers story',
+          'Followers name',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 12,
+            fontWeight: FontWeight.bold,
+            fontSize: 11,
           ),
         ),
       ],

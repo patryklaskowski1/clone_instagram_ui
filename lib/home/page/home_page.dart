@@ -1,5 +1,5 @@
-import 'package:clone_instagram_ui/home/page/followers_story.dart';
-import 'package:clone_instagram_ui/home/page/user_story_avatar.dart';
+import 'package:clone_instagram_ui/home/widgets/followers_story.dart';
+import 'package:clone_instagram_ui/home/widgets/user_story_avatar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -57,6 +57,44 @@ class HomePage extends StatelessWidget {
           Divider(
             height: 0.2,
             color: Colors.grey,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Row(
+                  children: [
+                    CircleAvatar(),
+                    SizedBox(width: 8),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Followers name',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Location',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+
+          
           ),
         ],
       ),

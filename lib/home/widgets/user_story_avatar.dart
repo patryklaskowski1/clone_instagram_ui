@@ -38,6 +38,7 @@ class UserStoryAvatar extends StatelessWidget {
           'Your story',
           style: TextStyle(
             color: Colors.white,
+            fontWeight: FontWeight.bold,
             fontSize: 12,
           ),
         ),
