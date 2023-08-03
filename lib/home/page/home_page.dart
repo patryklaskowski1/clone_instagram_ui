@@ -18,12 +18,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 15, 15, 15),
+      backgroundColor: Colors.black,
       appBar: AppBar(
         actions: const [
           Icon(
             Icons.heart_broken,
-            color: Colors.white,
+            color: Color.fromARGB(255, 59, 32, 32),
           ),
           SizedBox(
             width: 20,
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             color: Colors.white,
           ),
         ),
-        backgroundColor: const Color.fromARGB(255, 56, 55, 55),
+        backgroundColor: Colors.black,
       ),
       body: ListView(
         children: const [
