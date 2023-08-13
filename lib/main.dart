@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromARGB(255, 73, 72, 72)),
         useMaterial3: true,
       ),
-      home: const ProfilePage(),
+      home: ProfilePage(),
     );
   }
 }
