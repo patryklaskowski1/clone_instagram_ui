@@ -9,7 +9,6 @@ class ProfilePage extends StatelessWidget {
   });
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final String nameProfile = 'nameProfile';
-  final int _selectedIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -293,30 +292,6 @@ class ProfilePage extends StatelessWidget {
           ),
           const UserPhotoView(),
         ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home), label: '', backgroundColor: Colors.black),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: '',
-              backgroundColor: Colors.black),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.add_to_photos),
-              label: '',
-              backgroundColor: Colors.black),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.ondemand_video),
-              label: '',
-              backgroundColor: Colors.black),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle),
-              label: '',
-              backgroundColor: Colors.black),
-        ],
-        currentIndex: _selectedIndex,
-        backgroundColor: Colors.black,
       ),
     );
   }
