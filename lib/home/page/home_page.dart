@@ -1,6 +1,8 @@
+import 'package:clone_instagram_ui/const/const.dart';
 import 'package:clone_instagram_ui/home/widgets/followers_story.dart';
 import 'package:clone_instagram_ui/home/widgets/post_model.dart';
 import 'package:clone_instagram_ui/home/widgets/user_story_avatar.dart';
+import 'package:clone_instagram_ui/message/page/message_page_content.dart';
 import 'package:clone_instagram_ui/profile/page/profile_page.dart';
 import 'package:flutter/material.dart';
 
@@ -19,38 +21,56 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: backgroundColor,
       appBar: AppBar(
-        actions: const [
-          Icon(Icons.favorite_border, color: Colors.white),
-          SizedBox(
+        actions: [
+          const Icon(Icons.favorite_border, color: iconColor),
+          const SizedBox(
             width: 20,
           ),
           Padding(
-            padding: EdgeInsets.only(right: 20.0),
-            child: Icon(
-              Icons.send,
-              color: Colors.white,
+            padding: const EdgeInsets.only(right: 20.0),
+            child: IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const MessagePageContent(),
+                  ),
+                );
+              },
+              icon: const Icon(
+                Icons.send,
+                color: iconColor,
+              ),
             ),
           ),
         ],
         title: const Text(
           'Instagram',
           style: TextStyle(
-            color: Colors.white,
+            color: iconColor,
           ),
         ),
         backgroundColor: Colors.black,
       ),
       body: Builder(builder: (context) {
         if (selectedIndex == 1) {
-          return const Text('Wyszukaj');
+          return const Text(
+            'Wyszukaj',
+            style: TextStyle(color: iconColor),
+          );
         }
         if (selectedIndex == 2) {
-          return const Text('Dodaj zdjecie');
+          return const Text(
+            'Dodaj zdjecie',
+            style: TextStyle(color: iconColor),
+          );
         }
         if (selectedIndex == 3) {
-          return const Text('Reels');
+          return const Text(
+            'Reels',
+            style: TextStyle(color: iconColor),
+          );
         }
         if (selectedIndex == 4) {
           return ProfilePage();
@@ -87,9 +107,13 @@ class _HomePageState extends State<HomePage> {
         );
       }),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: backgroundColor,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.home), label: '', backgroundColor: Colors.black),
+            icon: Icon(Icons.home),
+            label: '',
+            backgroundColor: backgroundColor,
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.add_to_photos), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.ondemand_video), label: ''),
@@ -101,7 +125,6 @@ class _HomePageState extends State<HomePage> {
           },
         ),
         currentIndex: selectedIndex,
-        backgroundColor: Colors.black,
       ),
     );
   }

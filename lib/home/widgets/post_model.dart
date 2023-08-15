@@ -1,3 +1,4 @@
+import 'package:clone_instagram_ui/const/const.dart';
 import 'package:flutter/material.dart';
 
 class PostModel extends StatefulWidget {
@@ -12,6 +13,8 @@ class PostModel extends StatefulWidget {
 class _PostModelState extends State<PostModel> {
   final int counterLike = 0;
   final String user = 'Followers name';
+  Color _iconChangeColor = Colors.white;
+  IconData _favoriteIcon = Icons.favorite_border;
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +29,7 @@ class _PostModelState extends State<PostModel> {
                 height: 40,
                 width: 40,
                 decoration: const BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Colors.orange,
-                      Colors.red,
-                      Colors.purple,
-                    ]),
-                    shape: BoxShape.circle),
+                    gradient: gradientColors, shape: BoxShape.circle),
                 child: Padding(
                   padding: const EdgeInsets.all(3.0),
                   child: Container(
@@ -74,30 +72,45 @@ class _PostModelState extends State<PostModel> {
             image: AssetImage('images/dalmacja.jpg'),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.only(
-            left: 25,
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 15,
           ),
           child: Row(
             children: [
-              Icon(
-                Icons.favorite_border,
-                color: Colors.white,
+              IconButton(
+                icon: Icon(
+                  _favoriteIcon,
+                  color: _iconChangeColor,
+                ),
+                onPressed: () {
+                  setState(() {
+                    _iconChangeColor = Colors.red;
+                    _favoriteIcon = Icons.favorite;
+                  });
+                },
               ),
-              SizedBox(width: 20),
-              Icon(
-                Icons.comment,
-                color: Colors.white,
+              IconButton(
+                icon: const Icon(
+                  Icons.comment,
+                  color: iconColor,
+                ),
+                onPressed: () {},
               ),
-              SizedBox(width: 20),
-              Icon(
-                Icons.send,
-                color: Colors.white,
+              IconButton(
+                icon: const Icon(
+                  Icons.send,
+                  color: iconColor,
+                ),
+                onPressed: () {},
               ),
-              SizedBox(width: 220),
-              Icon(
-                Icons.bookmark_border,
-                color: Colors.white,
+              const SizedBox(width: 180),
+              IconButton(
+                icon: const Icon(
+                  Icons.bookmark_border,
+                  color: iconColor,
+                ),
+                onPressed: () {},
               ),
             ],
           ),

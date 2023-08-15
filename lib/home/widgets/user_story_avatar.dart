@@ -1,3 +1,4 @@
+import 'package:clone_instagram_ui/const/const.dart';
 import 'package:flutter/material.dart';
 
 class UserStoryAvatar extends StatelessWidget {
@@ -17,12 +18,7 @@ class UserStoryAvatar extends StatelessWidget {
                 height: 70,
                 width: 70,
                 decoration: const BoxDecoration(
-                    gradient: LinearGradient(colors: [
-               Colors.orange,
-                  Colors.red,
-                  Colors.purple,
-                    ]),
-                    shape: BoxShape.circle),
+                    gradient: gradientColors, shape: BoxShape.circle),
                 child: Padding(
                   padding: const EdgeInsets.all(3.0),
                   child: Container(

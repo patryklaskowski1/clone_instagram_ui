@@ -1,25 +1,33 @@
+import 'package:clone_instagram_ui/const/const.dart';
 import 'package:clone_instagram_ui/profile/widgets/drawer_menu_settings_profile.dart';
 import 'package:clone_instagram_ui/profile/widgets/user_photo_tag.dart';
 import 'package:clone_instagram_ui/profile/widgets/user_photo_view.dart';
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
-  ProfilePage({
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({
     super.key,
   });
+
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  final String nameProfile = 'nameProfile';
+
+  final bool isSelected = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      backgroundColor: Colors.black,
+      backgroundColor: backgroundColor,
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text(
+        backgroundColor: backgroundColor,
+        title: const Text(
           nameProfile,
-          style: const TextStyle(
+          style: TextStyle(
             color: Colors.white,
           ),
         ),
@@ -119,20 +127,20 @@ class ProfilePage extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   nameProfile,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                   ),
                 ),
-                const Text(
+                Text(
                   'BIO profile BIO profile BIO profile BIO profile BIO profile BIO profile BIO profile BIO profile  ',
                   style: TextStyle(color: Colors.white),
                 ),
@@ -253,7 +261,7 @@ class ProfilePage extends StatelessWidget {
                     bottom: BorderSide(width: 2, color: Colors.white),
                   )),
                   child: InkWell(
-                    onTap: () => const UserPhotoView(),
+                    onTap: () {},
                     child: const Padding(
                       padding: EdgeInsets.all(10.0),
                       child: Icon(
@@ -276,7 +284,9 @@ class ProfilePage extends StatelessWidget {
                     ),
                   )),
                   child: InkWell(
-                    onTap: () => const UserPhotoTag(),
+                    onTap: () => setState(() {
+                      isSelected == true;
+                    }),
                     child: const Padding(
                       padding: EdgeInsets.all(10.0),
                       child: Icon(

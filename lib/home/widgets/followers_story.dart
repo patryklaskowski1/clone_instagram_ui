@@ -1,3 +1,4 @@
+import 'package:clone_instagram_ui/const/const.dart';
 import 'package:flutter/material.dart';
 
 class FollowersStory extends StatelessWidget {
@@ -15,11 +16,7 @@ class FollowersStory extends StatelessWidget {
             height: 70,
             width: 70,
             decoration: const BoxDecoration(
-                gradient: LinearGradient(colors: [
-                  Colors.orange,
-                  Colors.red,
-                  Colors.purple,
-                ]),
+                gradient: gradientColors,
                 shape: BoxShape.circle),
             child: Padding(
               padding: const EdgeInsets.all(3.0),
