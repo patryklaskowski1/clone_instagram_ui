@@ -11,7 +11,7 @@ class PostModel extends StatefulWidget {
 }
 
 class _PostModelState extends State<PostModel> {
-  final int counterLike = 0;
+  int counterLike = 0;
   final String user = 'Followers name';
   Color _iconChangeColor = Colors.white;
   IconData _favoriteIcon = Icons.favorite_border;
@@ -87,6 +87,7 @@ class _PostModelState extends State<PostModel> {
                   setState(() {
                     _iconChangeColor = Colors.red;
                     _favoriteIcon = Icons.favorite;
+                    counterLike++;
                   });
                 },
               ),

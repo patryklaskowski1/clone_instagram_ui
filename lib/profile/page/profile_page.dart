@@ -300,7 +300,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ],
           ),
-          const UserPhotoView(),
+          const UserPhotoView()
         ],
       ),
     );

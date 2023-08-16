@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
+        
         actions: [
           const Icon(Icons.favorite_border, color: iconColor),
           const SizedBox(
@@ -55,25 +56,31 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Builder(builder: (context) {
         if (selectedIndex == 1) {
-          return const Text(
-            'Wyszukaj',
-            style: TextStyle(color: iconColor),
+          return const Center(
+            child: Text(
+              'Wyszukaj',
+              style: TextStyle(color: iconColor),
+            ),
           );
         }
         if (selectedIndex == 2) {
-          return const Text(
-            'Dodaj zdjecie',
-            style: TextStyle(color: iconColor),
+          return const Center(
+            child: Text(
+              'Dodaj zdjecie',
+              style: TextStyle(color: iconColor),
+            ),
           );
         }
         if (selectedIndex == 3) {
-          return const Text(
-            'Reels',
-            style: TextStyle(color: iconColor),
+          return const Center(
+            child: Text(
+              'Reels',
+              style: TextStyle(color: iconColor),
+            ),
           );
         }
         if (selectedIndex == 4) {
-          return ProfilePage();
+          return const ProfilePage();
         }
 
         return ListView(
@@ -107,6 +114,7 @@ class _HomePageState extends State<HomePage> {
         );
       }),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.shifting,
         backgroundColor: backgroundColor,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

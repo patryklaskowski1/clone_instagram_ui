@@ -11,7 +11,6 @@ class DrawerMenuSettingsProfile extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Container(
-          
           width: 500,
           height: 600,
           color: const Color.fromARGB(255, 87, 85, 85),
