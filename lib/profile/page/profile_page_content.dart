@@ -16,7 +16,9 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
-  final bool isSelected = false;
+  bool isSelected = false;
+  Widget userPhotoTag = const UserPhotoTag();
+  Widget userPhotoView = const UserPhotoView();
 
   @override
   Widget build(BuildContext context) {
@@ -285,7 +287,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   )),
                   child: InkWell(
                     onTap: () => setState(() {
-                      isSelected == true;
+                      isSelected = !isSelected;
                     }),
                     child: const Padding(
                       padding: EdgeInsets.all(10.0),
@@ -300,7 +302,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ],
           ),
-          const UserPhotoView()
+          userPhotoView
         ],
       ),
     );

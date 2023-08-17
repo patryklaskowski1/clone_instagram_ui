@@ -60,30 +60,34 @@ class _MessagePageContent extends State<MessagePageContent> {
           const SizedBox(height: 20),
           Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                  right: 20,
-                ),
-                child: TextField(
-                  style: const TextStyle(
-                    fontSize: 8,
+              SizedBox(
+                width: 420,
+                height: 50,
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    left: 20,
+                    right: 20,
                   ),
-                  decoration: InputDecoration(
-                    hintStyle: const TextStyle(
-                      fontSize: 15,
+                  child: TextField(
+                    style: const TextStyle(
+                      fontSize: 18,
                     ),
-                    hintText: "Search",
-                    prefixIcon: const Icon(
-                      Icons.search,
-                      size: 22,
-                    ),
-                    filled: true,
-                    fillColor: Colors.grey,
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(
-                          width: 1, color: Color.fromARGB(255, 87, 85, 85)),
-                      borderRadius: BorderRadius.circular(10),
+                    decoration: InputDecoration(
+                      hintStyle: const TextStyle(
+                        fontSize: 15,
+                      ),
+                      hintText: "Search",
+                      prefixIcon: const Icon(
+                        Icons.search,
+                        size: 22,
+                      ),
+                      filled: true,
+                      fillColor: Colors.grey,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                            width: 1, color: Color.fromARGB(255, 87, 85, 85)),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
                   ),
                 ),

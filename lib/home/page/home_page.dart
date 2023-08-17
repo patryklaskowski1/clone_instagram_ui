@@ -3,7 +3,8 @@ import 'package:clone_instagram_ui/home/widgets/followers_story.dart';
 import 'package:clone_instagram_ui/home/widgets/post_model.dart';
 import 'package:clone_instagram_ui/home/widgets/user_story_avatar.dart';
 import 'package:clone_instagram_ui/message/page/message_page_content.dart';
-import 'package:clone_instagram_ui/profile/page/profile_page.dart';
+import 'package:clone_instagram_ui/profile/page/profile_page_content.dart';
+import 'package:clone_instagram_ui/search/page/serach_page_content.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,7 +24,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
-        
         actions: [
           const Icon(Icons.favorite_border, color: iconColor),
           const SizedBox(
@@ -56,12 +56,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Builder(builder: (context) {
         if (selectedIndex == 1) {
-          return const Center(
-            child: Text(
-              'Wyszukaj',
-              style: TextStyle(color: iconColor),
-            ),
-          );
+          return const SearchPageContent();
         }
         if (selectedIndex == 2) {
           return const Center(
